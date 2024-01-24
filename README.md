@@ -40,7 +40,7 @@ NEXT_PUBLIC_APIKEY=your-api-key
 this api key is genrated from the themoviedb website
 
 ## Run the app 
-Run the app
+npm run dev
 
 ## Usage
 This app can only be used for screening perpesas or practice .

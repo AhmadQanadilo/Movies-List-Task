@@ -23,5 +23,24 @@ Before you begin, ensure you have the following installed on your machine:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone git@github.com:AhmadQanadilo/Movies-List-Task.git 
+   or 
+   git clone https://github.com/AhmadQanadilo/Movies-List-Task.git
    cd your-repo
+
+
+## Install dependencies:
+npm install
+
+
+## Set up environment variables:
+
+NEXT_PUBLIC_APIKEY=your-api-key
+
+this api key is genrated from the themoviedb website
+
+## Run the app 
+Run the app
+
+## Usage
+This app can only be used for screening perpesas or practice .

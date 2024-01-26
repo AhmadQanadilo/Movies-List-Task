@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import { searchMovies } from "./services/movieApi";
 import SearchBar from "./components/layoutComponents/SearchBar";
@@ -8,14 +9,19 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function Home() {
+  const intialSearchQuery =
+    typeof localStorage !== "undefined"
+      ? JSON.parse(localStorage.getItem("searchQuery"))
+      : null;
+  const intialFavList =
+    typeof localStorage !== "undefined"
+      ? JSON.parse(localStorage.getItem("favorites"))
+      : [];
+
   const [searchResults, setSearchResults] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [searchQuery, setSearchQuery] = useState(
-    JSON.parse(localStorage.getItem("searchQuery")) || null
-  );
-  const [faviorateList, setFaviorateList] = useState(
-    JSON.parse(localStorage.getItem("favorites")) || []
-  );
+  const [searchQuery, setSearchQuery] = useState(intialSearchQuery);
+  const [faviorateList, setFaviorateList] = useState(intialFavList);
   const [activeTab, setActiveTab] = useState("search");
 
   const handleSearch = async (q) => {
